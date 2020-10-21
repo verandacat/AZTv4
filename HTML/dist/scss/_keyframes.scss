@@ -1,0 +1,13 @@
+@import "variables";
+
+@keyframes appearBgColor {
+    0% {
+        background: rgba($yl, 0);
+        transform: scaleX(0);
+    }
+    100% {
+        background: rgba($yl, 0.3);
+        transform: scaleX(1);
+
+    }
+}

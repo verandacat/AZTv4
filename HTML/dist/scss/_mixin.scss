@@ -1,0 +1,105 @@
+@import "variables";
+
+// Breakpoints
+@mixin mobile {
+    @media (min-width: #{$breakpoint-mobile})
+    and (max-width: #{$breakpoint-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet})
+    and (max-width: #{$breakpoint-desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * *  Center Layout */
+
+// Flex
+@mixin flex($jc, $fd, $fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+}
+
+@mixin center($x: 50%, $y: 50%) {
+    left: $x;
+    top: $y;
+    transform: translate(-50%, -50%);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * *  Components */
+
+// Buttons
+/* Base */
+@mixin btn($width, $bgColor, $padding, $margin) {
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+    background-color: $bgColor;
+    @if $bgColor == $wh {
+        color: $bk;
+    } @else {
+        color: $wh;
+    }
+    display: block;
+}
+
+/* Mobile */
+@mixin btn_mobile_bl {
+    @include btn(15em, $bl, 1.5rem, 30px);
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin btn_mobile_bk {
+    @include btn(15em, $bk, 1.5rem, 30px);
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin border {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@mixin h2_sp($color:$bk) {
+    writing-mode: horizontal-tb;
+    // margin-top: 7rem;
+    position: relative;
+    text-align: center;
+    color: $color;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+@mixin h2_pc($color:$bk) {
+    writing-mode: vertical-lr;
+    color: $color;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-top: 9rem;
+    left: 50%;
+    top: -40px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+@mixin normal_shadow {
+    box-shadow: 0 5px 5px rgba(#000, 0.2);
+}
+
+@mixin icon_shadow {
+    box-shadow: 0 5px 10px rgba(#000, 1), inset 0 0 2px 2px rgba($bk, 0.5);
+}

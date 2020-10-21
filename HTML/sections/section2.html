@@ -1,0 +1,47 @@
+<section id="section__two" class="about__box 2">
+    
+    <article class="article">
+        <h2>We Welcome</h2>
+        <div class="contents">
+            <div class="mobile__box">
+                <div class="img__box">
+                    <img class="img__background" src="images/mobile1.png" alt="">
+                    <div class="img__inner">
+                        <div id="1" class="img__1 img__content active">
+                            <h3>활동에 적극적인 분</h3>
+                            <img src="images/about1.png" alt="">
+                            <p>온오프라인에서 적극적으로 활동이 가능하다고 생각하시는 분은 대환영!</p>
+                        </div>
+                        <div id="2" class="2 img__2 img__content">
+                            <h3>활동에 적극적인 분</h3>
+                            <img src="images/about2.png" alt="">
+                            <p>온오프라인에서 적극적으로 활동이 가능하다고 생각하시는 분은 대환영!</p>
+                        </div>
+                        <div id="3" class="img__3 img__content">
+                            <h3>활동에 적극적인 분</h3>
+                            <img src="images/about3.png" alt="">
+                            <p>온오프라인에서 적극적으로 활동이 가능하다고 생각하시는 분은 대환영!</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <a class="number" href="#1" data-id="1">1</a>
+            <a class="number" href="#2" data-id="2">2</a>
+            <a class="number" href="#3" data-id="3">3</a>
+            <div class="about__info">
+                <h3>Enjoy Japan Life!</h3>
+                <p>
+                    일본에 거주중인 <span class="gra">한국인 직장인</span>을 대상으로 한 친목모임입니다. <br /><br />카카오톡을 중심으로 활동을 하고 있으며, 힘든 타지생활속에서 <span class="gra">마음 편안히 쉴 수 있는 공간</span>을 목표로 개설되었습니다.
+                </p>
+            </div>
+        </div>
+    </article>
+</section>
+<script>
+    $(".number").click( function(e) {
+        e.preventDefault();
+        console.log(e.target.attr("href").offset.top());
+        
+    })
+</script>
